@@ -1,0 +1,16 @@
+using System;
+					
+public class Program
+{
+	public Weapon revolver;
+	public void Main()
+	{
+		revolver = new Weapon();
+		Console.WriteLine(revolver.WeaponName);
+	}
+
+public class Weapon {
+public int ammoCount = 6;
+public string WeaponName = "revolver";
+public float firepower = 6.5f;
+ 
