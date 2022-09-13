@@ -1,16 +1,19 @@
-using System;
-					
-public class Program
-{
-	public Weapon revolver;
-	public void Main()
+WeaponPowerUp = new PowerUp();
+		
+		revolver.ammoCount++;
+		revolver.firepower += WeaponPowerUp.Powerlevel;
+		Console.WriteLine(revolver.WeaponName + " it has an ammo count of " + revolver.ammoCount + ".");
+		Console.WriteLine(" the revolver's firepower is now " + revolver.firepower + ", it has been upgraded.");
+	}
+}
+	public class Weapon
 	{
-		revolver = new Weapon();
-		Console.WriteLine(revolver.WeaponName);
+		public int ammoCount = 6;
+		public string WeaponName = "revolver";
+		public float firepower = 6.5f;
 	}
 
-public class Weapon {
-public int ammoCount = 6;
-public string WeaponName = "revolver";
-public float firepower = 6.5f;
- 
+	public class PowerUp
+	{
+		public float Powerlevel = 3.5f;
+	}
